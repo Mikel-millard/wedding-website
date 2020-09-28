@@ -1,49 +1,40 @@
-import React, {useEffect, useState} from 'react';
-
+import React from "react";
 // nodejs library that concatenates classes
-import classNames from 'classnames';
-
+import classNames from "classnames";
 // nodejs library to set properties for components
-import PropTypes from 'prop-types';
-
+import PropTypes from "prop-types";
 // @material-ui/core components
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from "@material-ui/core/styles";
 
 // core components
 import styles from '../../assets/jss/website-template/components/parallaxStyle';
 
 const useStyles = makeStyles(styles);
 
-const Parallax = props => {
+export default function Parallax(props) {
     let windowScrollTop;
-
     if (window.innerWidth >= 768) {
         windowScrollTop = window.pageYOffset / 3;
     } else {
         windowScrollTop = 0;
     }
-
-    const [transform, setTransform] = useState(
+    const [transform, setTransform] = React.useState(
         "translate3d(0," + windowScrollTop + "px,0)"
     );
-
-    useEffect(() => {
+    React.useEffect(() => {
         if (window.innerWidth >= 768) {
             window.addEventListener("scroll", resetTransform);
         }
-
         return function cleanup() {
             if (window.innerWidth >= 768) {
                 window.removeEventListener("scroll", resetTransform);
             }
         };
     });
-
     const resetTransform = () => {
         var windowScrollTop = window.pageYOffset / 3;
         setTransform("translate3d(0," + windowScrollTop + "px,0)");
     };
-
     const { filter, className, children, style, image, small } = props;
     const classes = useStyles();
     const parallaxClasses = classNames({
@@ -52,7 +43,6 @@ const Parallax = props => {
         [classes.small]: small,
         [className]: className !== undefined
     });
-
     return (
         <div
             className={parallaxClasses}
@@ -75,5 +65,3 @@ Parallax.propTypes = {
     image: PropTypes.string,
     small: PropTypes.bool
 };
-
-export default Parallax;

@@ -1,5 +1,0 @@
-import * as ROUTES from './routes';
-import * as TEXT from './text';
-
-export const WEDDING_VIEWS = [[ROUTES.WEDDING, TEXT.WEDDING], [ROUTES.AFTER_PARTY, TEXT.AFTER_PARTY]]
-export const GENERAL_VIEWS = [[ROUTES.AFTER_PARTY, TEXT.AFTER_PARTY], [ROUTES.REGISTRY, TEXT.REGISTRY]]

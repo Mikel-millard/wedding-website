@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 // @material-ui/core components
-import { makeStyles} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -20,10 +20,12 @@ import Menu from '@material-ui/icons/Menu';
 
 // core components
 import styles from '../../assets/jss/website-template/components/headerStyle';
+import * as ROUTES from '../../constants/routes';
+import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles(styles);
 
-const Header = props => {
+export default function Header(props){
     const classes = useStyles();
 
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -45,8 +47,8 @@ const Header = props => {
 
     const headerColorChange = () => {
         const {color, changeColorOnScroll } = props;
-        const windowScrollTop = window.pageYOffset;
-        if (windowScrollTop > changeColorOnScroll.height) {
+        const windowsScrollTop = window.pageYOffset;
+        if (windowsScrollTop > changeColorOnScroll.height) {
             document.body
                 .getElementsByTagName("header")[0]
                 .classList.remove(classes[color]);
@@ -70,7 +72,7 @@ const Header = props => {
         [classes.absolute]: absolute,
         [classes.fixed]: fixed
     });
-    const brandComponent = <Button className={classes.title}>{brand}</Button>;
+    const brandComponent = <Link to={ROUTES.LANDING} className={classes.customLink}><Button className={classes.title}>{brand}</Button></Link>;
 
     return (
         <AppBar className={appBarClasses}>
@@ -157,5 +159,3 @@ Header.propTypes = {
         ]).isRequired
     })
 };
-
-export default Header;

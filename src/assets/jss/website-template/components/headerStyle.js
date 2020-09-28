@@ -13,6 +13,11 @@ import {
 } from '../material-kit-react';
 
 const headerStyle = {
+    customLink: {
+        "&,&:hover,&:focus": {
+            color: "inherit",
+        },
+    },
     appBar: {
         display: "flex",
         border: "0",

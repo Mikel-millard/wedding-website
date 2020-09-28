@@ -1,17 +1,18 @@
-import {container} from '../material-kit-react';
 import commonStyles from '../commonStyles';
 
 const signUpPageStyle = theme => ({
     ...commonStyles,
     container: {
         ...commonStyles.container,
+        paddingTop: "10vh",
         paddingBottom: "0px"
     },
     paper: {
-        margin: theme.spacing(0, 4),
+        margin: theme.spacing(-2, 4),
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        marginTop: "-50px"
     },
     avatar: {
         marginTop: theme.spacing(9),

@@ -1,10 +1,18 @@
 import React, {useState} from 'react';
+
+// application routing components
 import {Link as RouterLink, withRouter} from 'react-router-dom'
+
+// class composition
 import {compose} from 'recompose';
+
+// firebase components
 import {withFirebase} from '../../components/Firebase'
 
+// constants
 import * as ROUTES from '../../constants/routes'
 
+// @material-ui/core components
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -12,17 +20,27 @@ import TextField from '@material-ui/core/TextField';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import {makeStyles} from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import SignInPage, {SignInLink} from "../SignInPage";
-import styles from '../../assets/jss/website-template/views/signUpPage';
+import Paper from '@material-ui/core/Paper';
+
+// @material-ui/icons components
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+
+// core components
 import Header from '../../components/Header/Header';
 import HeaderLinks from '../../components/Header/HeaderLinks';
-import image from '../../assets/img/kissing.JPG';
-import Paper from '@material-ui/core/Paper';
+import {SignInLink} from '../SignInPage';
+
+// authentication component
 import AuthUserContext from '../../components/Session/context';
+
+import styles from '../../assets/jss/website-template/views/signUpPage';
+
+import image from '../../assets/img/starring_into_lake.jpg';
+import Footer from '../../components/Footer/Footer';
+import * as TEXT from '../../constants/text';
+
 function Copyright() {
     return (
         <Typography variant="body2" color="textSecondary" align="center">
@@ -40,13 +58,11 @@ const useStyles = makeStyles(styles);
 
 
 const SignUpPage = () => (
-    <div>
-        <AuthUserContext.Consumer>
-            {authUser => authUser === null ?
-                <SignUpForm authUser={null}  /> :
-                <SignUpForm authUser={authUser} /> }
-        </AuthUserContext.Consumer>
-    </div>
+    <AuthUserContext.Consumer>
+        {authUser => authUser === null ?
+            <SignUpForm authUser={null}/> :
+            <SignUpForm authUser={authUser}/>}
+    </AuthUserContext.Consumer>
 );
 
 const SignUpFormBase = (props) => {
@@ -87,7 +103,7 @@ const SignUpFormBase = (props) => {
                         setPasswordTwo(passwordTwo);
                         setEmail(email);
                         setInviteCode(inviteCode);
-                        props.history.push(ROUTES.HOME);
+                        props.history.push(ROUTES.WEDDING);
                     })
                     .catch(error => {
                         setError(error);
@@ -105,7 +121,7 @@ const SignUpFormBase = (props) => {
             <Header
                 absolute
                 color="transparent"
-                brand="Material Kit React"
+                brand={TEXT.MIKEL_AND_ABIGAIL_WEDDING}
                 rightLinks={<HeaderLinks authUser={props.authUser}/>}
                 {...rest}
             />
@@ -114,10 +130,10 @@ const SignUpFormBase = (props) => {
                 style={{
                     backgroundImage: "url(" + image + ")",
                     backgroundSize: "cover",
-                    backgroundPosition: "top center"
+                    backgroundPosition: "top left"
                 }}
             >
-                <Grid component="main" className={classes.container}>
+                <Grid container component="main" justify="center" className={classes.container}>
                     <CssBaseline/>
                     <Grid item component={Paper} xs={12} sm={12} md={4}>
                         <div className={classes.paper}>
@@ -206,13 +222,11 @@ const SignUpFormBase = (props) => {
                                         <SignInLink href="#" variant="body2"/>
                                     </Grid>
                                 </Grid>
-                                <Box mt={2}>
-                                    <Copyright/>
-                                </Box>
                             </form>
                         </div>
                     </Grid>
                 </Grid>
+                <Footer whiteFont/>
             </div>
         </div>
     );

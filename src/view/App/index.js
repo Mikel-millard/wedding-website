@@ -25,26 +25,34 @@ import {withAuthentication} from '../../components/Session';
 import history from '../../components/History/history';
 import WeddingPage from '../WeddingPage';
 import RegistryPage from '../RegistryPage';
+import HoneymoonPage from '../HoneymoonPage';
+import AccommodationPage from '../AccommodationPage';
+import AfterPartyPage from '../AfterPartyPage';
+import TravelPage from '../TravelPage';
+import PasswordChangePage from '../PasswordChangePage';
 
 const App = () => (
     <Router history={history}>
-        <Switch>
-            <AppMainView />
-        </Switch>
+            <AppMainView/>
     </Router>
 );
 
 const AppMainView = () => {
 
     return (
-        <main>
+        <Switch>
             <Route exact path={ROUTES.LANDING} component={LandingPage} name="Landing"/>
             <Route path={ROUTES.SIGN_IN} component={SignInPage} name="SignIn"/>
             <Route path={ROUTES.SIGN_UP} component={SignUpPage} name="SignUp"/>
-            <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} name="SignUp"/>
+            <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} name="Password Forget"/>
             <Route path={ROUTES.WEDDING} component={WeddingPage} name="Wedding"/>
-            <Route path={ROUTES.REGISTRY} component={RegistryPage} name="Wedding"/>
-        </main>
+            <Route path={ROUTES.REGISTRY} component={RegistryPage} name="Registry"/>
+            <Route path={ROUTES.HONEYMOON} component={HoneymoonPage} name="Honeymoon"/>
+            <Route path={ROUTES.ACCOMMODATIONS} component={AccommodationPage} name="Accommodation"/>
+            <Route path={ROUTES.AFTER_PARTY} component={AfterPartyPage} name="AfterParty"/>
+            <Route path={ROUTES.TRAVEL} component={TravelPage} name="TravelPage" />
+            <Route path={ROUTES.PASSWORD_CHANGE} component={PasswordChangePage} name="PasswordChange"/>
+        </Switch>
     )
 }
 

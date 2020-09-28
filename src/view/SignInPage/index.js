@@ -36,35 +36,21 @@ import {SignUpLink} from "../SignUpPage";
 import {PasswordForgetLink} from "../PasswordForgetPage";
 
 // user authentication components
-import {AuthUserContext, withAuthorization} from '../../components/Session';
-import withAuthentication from '../../components/Session/withAuthentication';
+import AuthUserContext from '../../components/Session/context';
 
 import styles from '../../assets/jss/website-template/views/signInPage';
 
-import image from '../../assets/img/kissing.JPG';
+import image from '../../assets/img/starring_into_lake.jpg';
+import Footer from '../../components/Footer/Footer';
+import * as TEXT from '../../constants/text';
 
 const SignInPage = () => (
-    <div>
         <AuthUserContext.Consumer>
             {authUser => authUser === null ?
                 <SignInForm authUser={null} /> :
                 <SignInForm authUser={authUser}/> }
         </AuthUserContext.Consumer>
-    </div>
 );
-
-function Copyright() {
-    return (
-        <Typography variant="body2" color="textSecondary" align="center">
-            {'Copyright © '}
-            <Link color="inherit" href="https://material-ui.com/">
-                Your Company Here
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
-}
 
 const useStyles = makeStyles(styles);
 
@@ -85,7 +71,7 @@ const SignInFormBase = (props) => {
             .then(() => {
                 setEmail(email);
                 setPassword(password);
-                props.history.push(ROUTES.HOME);
+                props.history.push(ROUTES.WEDDING);
             })
             .catch(error => {
                 setError(error);
@@ -99,7 +85,7 @@ const SignInFormBase = (props) => {
             <Header
                 absolute
                 color="transparent"
-                brand="Material Kit React"
+                brand={TEXT.MIKEL_AND_ABIGAIL_WEDDING}
                 rightLinks={<HeaderLinks authUser={props.authUser}/>}
                 {...rest}
             />
@@ -108,10 +94,10 @@ const SignInFormBase = (props) => {
                 style={{
                     backgroundImage: "url(" + image + ")",
                     backgroundSize: "cover",
-                    backgroundPosition: "top center"
+                    backgroundPosition: "top left"
                 }}
             >
-                <Grid container component="main" className={classes.container}>
+                <Grid container component="main" justify="center" className={classes.container}>
                     <CssBaseline/>
                     <Grid item component={Paper} xs={12} sm={12} md={4}>
                         <div className={classes.paper}>
@@ -166,13 +152,11 @@ const SignInFormBase = (props) => {
                                         <SignUpLink href="#" variant="body2"/>
                                     </Grid>
                                 </Grid>
-                                <Box mt={2}>
-                                    <Copyright/>
-                                </Box>
                             </form>
                         </div>
                     </Grid>
                 </Grid>
+                <Footer whiteFont/>
             </div>
         </div>
     );

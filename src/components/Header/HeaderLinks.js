@@ -23,7 +23,6 @@ import * as ROLES from '../../constants/roles';
 import * as TEXT from '../../constants/text';
 
 import SignOutButton from '../SignOutButton';
-import * as VIEWS from '../../constants/authorizedViews';
 
 const useStyles = makeStyles(styles);
 
@@ -45,7 +44,7 @@ export default function HeaderLinks({authUser}, props) {
                 >
                     <Button
                         color="transparent"
-                        href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
+                        href="https://www.instagram.com/nightmarerega1ia"
                         target="_blank"
                         className={classes.navLink}
                     >
@@ -138,11 +137,43 @@ const Dropdown = (props) => {
         )
     }
 
+    const HoneymoonView = () => {
+        return (
+            <Link to={ROUTES.HONEYMOON} className={classes.dropdownLink}>
+                {TEXT.HONEYMOON}
+            </Link>
+        )
+    }
+
+    const AccommodationView = () => {
+        return (
+            <Link to={ROUTES.ACCOMMODATIONS} className={classes.dropdownLink}>
+                {TEXT.ACCOMMODATIONS}
+            </Link>
+        )
+    }
+
+    const TravelView = () => {
+        return (
+            <Link to={ROUTES.TRAVEL} className={classes.dropdownLink}>
+                {TEXT.TRAVEL}
+            </Link>
+        )
+    }
+
+    const PasswordChangeView = () => {
+        return (
+            <Link to={ROUTES.PASSWORD_CHANGE} className={classes.dropdownLink}>
+                {TEXT.PASSWORD_CHANGE}
+            </Link>
+        )
+    }
+
     return (
         <ListItem className={classes.listItem}>
             <CustomDropdown
                 noLiPadding
-                buttonText="Components"
+                buttonText="Pages"
                 buttonProps={{
                     className: classes.navLink,
                     color: "transparent"
@@ -150,8 +181,12 @@ const Dropdown = (props) => {
                 buttonIcon={Apps}
                 dropdownList={[
                     weddingViews ? WeddingView() : '',
+                    weddingViews ? AccommodationView() : '',
+                    weddingViews ? TravelView() : '',
                     weddingViews || generalViews ? AfterPartyView() : '',
-                    weddingViews || generalViews ? RegistryView() : ''
+                    weddingViews || generalViews ? RegistryView() : '',
+                    weddingViews || generalViews ? HoneymoonView() : '',
+                    weddingViews || generalViews ? PasswordChangeView() : '',
                 ]}
             />
         </ListItem>
