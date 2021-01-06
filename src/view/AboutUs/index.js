@@ -13,7 +13,7 @@ import GridItem from '../../components/Grid/GridItem';
 import styles from '../../assets/jss/website-template/views/aboutUs';
 import {makeStyles} from '@material-ui/core/styles';
 import classNames from 'classnames';
-import AboutUsSection from './Sections/AboutUsDetails';
+import AboutUsDetails from './Sections/AboutUsDetails';
 import Footer from '../../components/Footer/Footer';
 
 const useStyles = makeStyles(styles);
@@ -58,7 +58,7 @@ const AboutUsPageBase = (props) => {
                 </div>
             </Parallax>
             <div className={classNames(classes.main, classes.mainRaised)}>
-                <AboutUsSection/>
+                <AboutUsDetails/>
             </div>
             <Footer />
         </div>
