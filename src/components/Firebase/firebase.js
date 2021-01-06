@@ -7,12 +7,12 @@ import 'firebase/database';
 import * as ROLES from '../../constants/roles';
 
 const config = {
-    apiKey: "AAAA2gXT3gA:APA91bFRY5o3oTl0SSGgFLxDj1S1EHLImd_f66sVmCBoEZXV9kFVDMd8SeUaMhbThgW5L5whHLU_wSMbnVprlCO_ny168A4W4pOyon6W811SBOG8VXP_WbQRIZARuTCoaujl_yxseUSr",
-    authDomain: "wedding-website-react.firebaseapp.com",
-    databaseURL: "https://wedding-website-react.firebaseio.com",
-    projectId: "wedding-website-react",
-    storageBucket: "wedding-website-react.appspot.com",
-    messagingSenderId: "936400641536",
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    databaseURL: process.env.REACT_APP_DATABASE_URL,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
 };
 
 class Firebase {
