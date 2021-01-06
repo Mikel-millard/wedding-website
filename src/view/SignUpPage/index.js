@@ -188,10 +188,10 @@ const SignUpFormBase = (props) => {
                                     variant="outlined"
                                     required
                                     fullWidth
-                                    name="password"
+                                    name="confirmPassword"
                                     label="Confirm Password"
                                     type="password"
-                                    id="password"
+                                    id="confirmPassword"
                                     autoComplete="confirm-password"
                                     value={passwordTwo}
                                     onChange={event => setPasswordTwo(event.target.value)}
