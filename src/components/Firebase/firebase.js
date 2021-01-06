@@ -75,6 +75,7 @@ class Firebase {
 
     checkInviteCode = code => {
         console.debug('Checking invite code in firebase : ' + code);
+        console.debug('API Key : ' + process.env.REACT_APP_API_KEY);
         return this.db.ref(`invites`).orderByChild("value").equalTo(code).once('value').then(function(snapshot) {
             if (snapshot.exists()) {
                 return ROLES.WEDDING;
