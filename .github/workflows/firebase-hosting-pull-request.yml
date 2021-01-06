@@ -16,3 +16,4 @@ jobs:
           projectId: wedding-website-react
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
+          CI: false
