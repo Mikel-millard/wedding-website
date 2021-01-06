@@ -10,3 +10,4 @@ export const TRAVEL = '/travel';
 export const HONEYMOON = '/honeymoon';
 export const REGISTRY = '/registry';
 export const PASSWORD_CHANGE = '/pw-change';
+export const ABOUT_US = '/about-us';

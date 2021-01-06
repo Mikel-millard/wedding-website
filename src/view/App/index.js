@@ -30,6 +30,7 @@ import AccommodationPage from '../AccommodationPage';
 import AfterPartyPage from '../AfterPartyPage';
 import TravelPage from '../TravelPage';
 import PasswordChangePage from '../PasswordChangePage';
+import AboutUsPage from '../AboutUs';
 
 const App = () => (
     <Router history={history}>
@@ -52,6 +53,7 @@ const AppMainView = () => {
             <Route path={ROUTES.AFTER_PARTY} component={AfterPartyPage} name="AfterParty"/>
             <Route path={ROUTES.TRAVEL} component={TravelPage} name="TravelPage" />
             <Route path={ROUTES.PASSWORD_CHANGE} component={PasswordChangePage} name="PasswordChange"/>
+            <Route path={ROUTES.ABOUT_US} component={AboutUsPage} name="AboutUs"/>
         </Switch>
     )
 }

@@ -74,7 +74,7 @@ class Firebase {
     users = () => this.db.ref('users');
 
     checkInviteCode = code => {
-        console.log('Checking invite code in firebase : ' + code);
+        console.debug('Checking invite code in firebase : ' + code);
         return this.db.ref(`invites`).orderByChild("value").equalTo(code).once('value').then(function(snapshot) {
             if (snapshot.exists()) {
                 return ROLES.WEDDING;
@@ -85,6 +85,18 @@ class Firebase {
             return ROLES.GENERAL;
         });
     }
+
+    deleteInviteCode = code => {
+        console.debug('Deleting invite code from database : ' + code);
+        var query = this.db.ref(`invites`).orderByChild("value").equalTo(code);
+        query.once("value", function(snapshot) {
+            snapshot.forEach(function(child) {
+                child.ref.remove();
+            })
+        })
+    }
 }
+
+
 
 export default Firebase;

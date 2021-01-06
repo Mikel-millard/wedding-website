@@ -4,7 +4,7 @@ import styles from '../../../assets/jss/website-template/views/honeymoonPageSect
 import {makeStyles} from '@material-ui/core/styles';
 import GridContainer from '../../../components/Grid/GridContainer';
 import GridItem from '../../../components/Grid/GridItem';
-import royalBahamian from '../../../assets/img/royal_bahamian.jpg';
+import resort from '../../../assets/img/under_construction.jpg';
 import classNames from 'classnames';
 
 const useStyles = makeStyles(styles);
@@ -23,30 +23,25 @@ export default function HoneymoonDetailsSection() {
                 <br/>
 
                 <h4>
-                    We are currently planning to spend 4 nights at the Sandals Resort in the Bahamas. These are
+                    We are currently planning to spend 5 nights in Cancun, Q.R., Mexico. These are
                     currently tentative plans so the date and location may change. Check back for updates closer to the
-                    wedding. Find more about the resort and Nassau, Bahamas below.
+                    wedding. Find more about the resort and Cancun, Q.R., Mexico below.
                 </h4>
 
                 <br/>
 
                 <h3>
-                    <i>Sandals Royal Bahamian -</i>
+                    <i>Enter Resort Here -</i>
                 </h3>
                 <h4>
-                    World renowned Sandals and Beaches Resorts has transformed from one brand and one resort in Montego
-                    Bay, Jamaica to become one of the most well-known and award-winning hospitality names in the world.
-                    With five brands and 24 properties in seven countries including Antigua, The Bahamas, Grenada,
-                    Barbados, Jamaica, Saint Lucia and Turks and Caicos, Sandals and Beaches Resorts is the undisputed
-                    leader of Caribbean vacation experiences and remains fiercely committed to the region, dedicating
-                    itself to innovative resort development that in the words of Chairman and Founder Gordon "Butch"
-                    Stewart, "exceed expectations" for guests, associates and the people who call the Caribbean home.
+                    This is where the details of the resort we plan to stay at will be put. Please check back later, more
+                    details will be added as plans ar finalized.
                 </h4>
                 <GridContainer justify="center">
                     <GridItem xs={12} sm={12} md={4}>
                         <img
                             alt="..."
-                            src={royalBahamian}
+                            src={resort}
                             className={navImageClasses}
                         />
                     </GridItem>

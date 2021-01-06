@@ -23,6 +23,7 @@ import * as ROLES from '../../constants/roles';
 import * as TEXT from '../../constants/text';
 
 import SignOutButton from '../SignOutButton';
+import {ABOUT_US} from '../../constants/routes';
 
 const useStyles = makeStyles(styles);
 
@@ -169,6 +170,14 @@ const Dropdown = (props) => {
         )
     }
 
+    const AboutUsView = () => {
+        return (
+            <Link to={ROUTES.ABOUT_US} className={classes.dropdownLink}>
+                {TEXT.ABOUT_US}
+            </Link>
+        )
+    }
+
     return (
         <ListItem className={classes.listItem}>
             <CustomDropdown
@@ -180,12 +189,13 @@ const Dropdown = (props) => {
                 }}
                 buttonIcon={Apps}
                 dropdownList={[
-                    weddingViews ? WeddingView() : '',
+                    weddingViews || generalViews ? AboutUsView() : '',
                     weddingViews ? AccommodationView() : '',
-                    weddingViews ? TravelView() : '',
                     weddingViews || generalViews ? AfterPartyView() : '',
-                    weddingViews || generalViews ? RegistryView() : '',
                     weddingViews || generalViews ? HoneymoonView() : '',
+                    weddingViews || generalViews ? RegistryView() : '',
+                    weddingViews ? TravelView() : '',
+                    weddingViews ? WeddingView() : '',
                     weddingViews || generalViews ? PasswordChangeView() : '',
                 ]}
             />

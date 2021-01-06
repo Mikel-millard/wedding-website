@@ -62,7 +62,6 @@ const SignInFormBase = (props) => {
     const isInvalid = password === '' || email === '';
     const {...rest} = props;
 
-    console.log('In Sign In Page');
     console.log(props.authUser === null);
 
     const doSubmit = event => {

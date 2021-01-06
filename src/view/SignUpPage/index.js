@@ -89,6 +89,7 @@ const SignUpFormBase = (props) => {
                 props.firebase
                     .doCreateUserWithEmailAndPassword(email, passwordOne)
                     .then(authUser => {
+                        props.firebase.deleteInviteCode(inviteCode);
                         return props.firebase
                             .user(authUser.user.uid)
                             .set({
