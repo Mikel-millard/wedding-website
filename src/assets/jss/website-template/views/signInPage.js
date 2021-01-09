@@ -1,4 +1,3 @@
-import { container } from '../material-kit-react';
 import commonStyles from '../commonStyles';
 
 const signInPageStyle = theme => ({

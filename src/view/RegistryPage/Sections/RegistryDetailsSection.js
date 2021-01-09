@@ -1,18 +1,13 @@
 import React from 'react';
 import classNames from 'classnames';
-import GridContainer from '../../../components/Grid/GridContainer';
-import GridItem from '../../../components/Grid/GridItem';
-import location from '../../../assets/img/tucker_house_location.png';
 import travelersJoy from '../../../assets/img/travelers_joy.png';
 import styles from '../../../assets/jss/website-template/views/registryPageSections/RegistryDetails';
 import {makeStyles} from '@material-ui/core/styles';
-import * as URLS from '../../../constants/urls';
 
 const useStyles = makeStyles(styles);
 
 export default function RegistryDetailsSection() {
     const classes = useStyles();
-    const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
     const imageClasses = classNames(
         classes.imgRaised,
         classes.imgRoundedCircle,
@@ -36,6 +31,7 @@ export default function RegistryDetailsSection() {
                 <a
                     href="http://www.travelersjoy.com/mikellovesabigail/"
                     target="_blank"
+                    rel="noopener noreferrer"
                 >
                     <img
                         src={travelersJoy}

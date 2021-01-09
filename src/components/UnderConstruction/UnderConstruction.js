@@ -2,7 +2,6 @@ import React from 'react';
 import classNames from 'classnames';
 import GridContainer from '../Grid/GridContainer';
 import GridItem from '../Grid/GridItem';
-import suites from '../../assets/img/tucker_house_harrison_house.jpg';
 
 import styles from '../../assets/jss/website-template/components/underConstructionStyle';
 import {makeStyles} from '@material-ui/core/styles';

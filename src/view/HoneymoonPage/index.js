@@ -2,7 +2,6 @@ import React from 'react';
 
 // authorization component
 import {AuthUserContext, withAuthorization} from '../../components/Session/';
-import * as ROLES from '../../constants/roles';
 import {Redirect} from 'react-router';
 import * as ROUTES from '../../constants/routes';
 import Header from '../../components/Header/Header';
@@ -15,7 +14,6 @@ import classNames from 'classnames';
 import {makeStyles} from '@material-ui/core/styles';
 import styles from '../../assets/jss/website-template/views/honeymoonPage';
 import HoneymoonDetailsSection from './Sections/HoneymoonDetailsSection';
-import UnderConstruction from '../../components/UnderConstruction/UnderConstruction';
 import Footer from '../../components/Footer/Footer';
 import HoneymoonLocationSection from './Sections/HoneymoonLocationSection';
 

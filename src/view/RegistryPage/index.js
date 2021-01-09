@@ -16,7 +16,6 @@ import GridItem from '../../components/Grid/GridItem';
 import classNames from 'classnames';
 import Footer from '../../components/Footer/Footer';
 import RegistryDetailsSection from './Sections/RegistryDetailsSection';
-import UnderConstruction from '../../components/UnderConstruction/UnderConstruction';
 
 const useStyles = makeStyles(styles);
 

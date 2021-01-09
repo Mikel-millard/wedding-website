@@ -2,7 +2,6 @@ import React from 'react';
 
 // authorization component
 import {AuthUserContext, withAuthorization} from '../../components/Session/';
-import * as ROLES from '../../constants/roles';
 import {Redirect} from 'react-router';
 import * as ROUTES from '../../constants/routes';
 

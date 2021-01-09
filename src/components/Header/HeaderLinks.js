@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 // react components for router app without refresh
 import {Link} from 'react-router-dom';
@@ -10,7 +10,7 @@ import ListItem from '@material-ui/core/ListItem';
 import Tooltip from '@material-ui/core/Tooltip';
 
 // @material-ui/icons
-import {Apps, CloudDownload, ExitToApp} from '@material-ui/icons';
+import {Apps, ExitToApp} from '@material-ui/icons';
 
 // need to add imports for own CustomDropdown and CustomButtons here
 import CustomDropdown from '../CustomDropdown/CustomDropdown';
@@ -23,7 +23,6 @@ import * as ROLES from '../../constants/roles';
 import * as TEXT from '../../constants/text';
 
 import SignOutButton from '../SignOutButton';
-import {ABOUT_US} from '../../constants/routes';
 
 const useStyles = makeStyles(styles);
 

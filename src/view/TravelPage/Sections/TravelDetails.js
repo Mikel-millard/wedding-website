@@ -44,6 +44,7 @@ export default function TravelDetailsSection() {
                             style={{color: 'black'}}
                             href={URLS.SEATTLE_DIRECTIONS}
                             target="_blank"
+                            rel="noopener noreferrer"
                         >
                             Click here
                         </a>
@@ -54,6 +55,7 @@ export default function TravelDetailsSection() {
                         <a style={{color: 'black'}}
                            href={URLS.SPOKANE_DIRECTIONS}
                            target="_blank"
+                           rel="noopener noreferrer"
                         >
                             Click here
                         </a>
