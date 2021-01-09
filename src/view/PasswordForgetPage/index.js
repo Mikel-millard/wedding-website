@@ -1,8 +1,7 @@
-import React, {Component, useState} from 'react';
+import React, {useState} from 'react';
 import * as ROUTES from '../../constants/routes';
 import {withFirebase} from '../../components/Firebase';
 import {Link as RouterLink} from 'react-router-dom';
-import Container from '@material-ui/core/Container';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Header from '../../components/Header/Header';
 import HeaderLinks from '../../components/Header/HeaderLinks';

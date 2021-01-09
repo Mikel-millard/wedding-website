@@ -38,6 +38,11 @@ export default function LandingCarouselSection() {
     return (
         <div className={classes.section}>
             <div className={classes.container}>
+                <h4>
+                    Please sign up for an account if you don't have one. If you have an invite code,
+                    provide it when signing up. Otherwise, feel free to leave it blank.
+                </h4>
+                <br/>
                 <GridContainer>
                     <GridItem xs={12} sm={12} md={8} className={classes.marginAuto}>
                         <Card carousel>

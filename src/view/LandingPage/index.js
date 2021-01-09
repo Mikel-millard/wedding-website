@@ -61,10 +61,6 @@ const LandingPageBase = (props) => {
                         <GridItem>
                             <div className={classes.brand}>
                                 <h1 className={classes.title}>Welcome to Mikel and Abigail's wedding website</h1>
-                                <h3 className={classes.subtitle}>
-                                    Please sign up for an account if you don't have one. If you have an invite code,
-                                    provide it when signing up. Otherwise, feel free to leave it blank.
-                                </h3>
                             </div>
                         </GridItem>
                     </GridContainer>
