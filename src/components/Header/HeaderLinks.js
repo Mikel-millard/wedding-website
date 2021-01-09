@@ -44,7 +44,7 @@ export default function HeaderLinks({authUser}, props) {
                 >
                     <Button
                         color="transparent"
-                        href="https://www.instagram.com/nightmarerega1ia"
+                        href="https://www.instagram.com/mikelandabigail/"
                         target="_blank"
                         className={classes.navLink}
                     >
