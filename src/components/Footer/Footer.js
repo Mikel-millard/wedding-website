@@ -48,6 +48,7 @@ export default function Footer(props) {
                                 href="mailto:mikel_and_abigail@outlook.com?subject=Support for mikel-and-abigails-wedding.web.app"
                                 className={classes.block}
                                 target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 Contact Us
                             </a>

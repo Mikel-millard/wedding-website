@@ -212,7 +212,7 @@ const SignUpFormBase = (props) => {
                         </div>
                     </Grid>
                 </Grid>
-                <Footer whiteFont/>
+                {/*<Footer whiteFont/>*/}
             </div>
         </div>
     );

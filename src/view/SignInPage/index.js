@@ -153,7 +153,7 @@ const SignInFormBase = (props) => {
                         </div>
                     </Grid>
                 </Grid>
-                <Footer whiteFont/>
+                {/*<Footer whiteFont/>*/}
             </div>
         </div>
     );
