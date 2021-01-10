@@ -45,6 +45,15 @@ export default function Footer(props) {
                         </ListItem>
                         <ListItem className={classes.inlineBlock}>
                             <a
+                                href="mailto:mikel_and_abigail@outlook.com?subject=Support for mikel-and-abigails-wedding.web.app"
+                                className={classes.block}
+                                target="_blank"
+                            >
+                                Contact Us
+                            </a>
+                        </ListItem>
+                        <ListItem className={classes.inlineBlock}>
+                            <a
                                 href="/"
                                 className={classes.block}
                                 target="_blank"
