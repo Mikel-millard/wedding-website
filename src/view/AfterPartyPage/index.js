@@ -15,8 +15,8 @@ import GridContainer from '../../components/Grid/GridContainer';
 import GridItem from '../../components/Grid/GridItem';
 import classNames from 'classnames';
 import AfterPartyDetailsSection from './Sections/AfterPartyDetails';
-import UnderConstruction from '../../components/UnderConstruction/UnderConstruction';
 import Footer from '../../components/Footer/Footer';
+import AfterPartyLocationSection from "./Sections/AfterPartyLocation";
 
 const useStyles = makeStyles(styles);
 
@@ -48,15 +48,15 @@ const AfterPartyPageBase = (props) => {
                 }}
                 {...rest}
             />
-            <Parallax image={require('../../assets/img/friday_harbor.jpg')}>
+            <Parallax image={require('../../assets/img/botanicalGarden.jpg')}>
                 <div className={classes.container}>
                     <GridContainer>
                         <GridItem>
                             <div className={classes.brand}>
                                 <h1 className={classes.title}>After Party</h1>
                                 <h3 className={classes.subtitle}>
-                                    August 7th, 2021 <br/>
-                                    Location TBA
+                                    August 7th, 2021 3:30 pm - 6:30 pm<br/>
+                                    Auburn, WA
                                 </h3>
                             </div>
                         </GridItem>
@@ -65,7 +65,7 @@ const AfterPartyPageBase = (props) => {
             </Parallax>
             <div className={classNames(classes.main, classes.mainRaised)}>
                 <AfterPartyDetailsSection/>
-                <UnderConstruction/>
+                <AfterPartyLocationSection/>
             </div>
             <Footer />
         </div>
