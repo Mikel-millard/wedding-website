@@ -67,9 +67,9 @@ export default function AccommodationsSection() {
                 <br/>
 
                 <h4>
-                    Below are the checkin and checkout times.
-                        Check in: Wednesday August 4th after 4 pm.
-                        Check out: Friday August 6th before 10 am.
+                    Below are the checkin and checkout times.<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Check in: Wednesday August 4th after 4 pm.<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Check out: Friday August 6th before 10 am.
                 </h4>
             </div>
         </div>
