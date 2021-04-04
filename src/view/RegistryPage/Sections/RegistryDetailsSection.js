@@ -32,6 +32,9 @@ export default function RegistryDetailsSection() {
                     below link to Travelers Joy.
                 </h4>
 
+                <br/>
+                <br/>
+
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a
                     href="http://www.travelersjoy.com/mikellovesabigail/"

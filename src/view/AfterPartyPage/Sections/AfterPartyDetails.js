@@ -18,8 +18,13 @@ export default function AfterPartyDetailsSection() {
                 <br/>
 
                 <h4>
-                    We will be having a party for friends and family a couple days after the wedding. This page will
-                    provide all the details of this party.
+                    There will be a party several days after the wedding for friends and family to celebrate with the
+                    bride and groom. The time and location, as well as travel details can be found below. There will also
+                    be invitations sent out with these details.
+
+                    <br/>
+                    <br/>
+                    We will be sending out invitations with RSVP cards. Please RSVP by June 30th 2021.
                 </h4>
             </div>
         </div>

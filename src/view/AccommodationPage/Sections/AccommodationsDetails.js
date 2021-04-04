@@ -29,8 +29,7 @@ export default function AccommodationsSection() {
                 <br/>
 
                 <h4>
-                    We will be providing the accommodations for wedding guests. If you do not hear from us about your
-                    rooms, please contact is around mid-April. Below is a little bit about the Tucker House Inn &
+                    We will be providing the accommodations for wedding guests. Below is a little bit about the Tucker House Inn &
                     Harrison House Suites, which is where guests will be staying.
                 </h4>
 
@@ -68,8 +67,9 @@ export default function AccommodationsSection() {
                 <br/>
 
                 <h4>
-                    Please check back later for more details on the address of the inn as well as details such as
-                    check-in and check-out times.
+                    Below are the checkin and checkout times.
+                        Check in: Wednesday August 4th after 4 pm.
+                        Check out: Friday August 6th before 10 am.
                 </h4>
             </div>
         </div>

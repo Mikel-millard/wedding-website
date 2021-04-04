@@ -2,10 +2,10 @@ import {container} from '../../material-kit-react';
 
 import imagesStyles from '../../imageStyles';
 
-const honeymoonLocationStyles = {
+const afterPartyLocationStyles = {
     ...imagesStyles,
     section: {
-        padding: "10px 0"
+        padding: "30px 0"
     },
     container,
     marginAuto: {
@@ -14,4 +14,4 @@ const honeymoonLocationStyles = {
     }
 }
 
-export default honeymoonLocationStyles;
+export default afterPartyLocationStyles;
