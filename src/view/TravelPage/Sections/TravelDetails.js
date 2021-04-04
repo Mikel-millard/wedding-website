@@ -40,7 +40,7 @@ export default function TravelDetailsSection() {
                 <br/>
 
                 <h4>
-                    <strong>Ferry Details</strong>
+                    <strong>Ferry Details:</strong><br/>
                     Travel to the island will require use of a ferry. Reservations can be made for the Washington State
                     Ferry online or via phone beginning 2 weeks before each new ferry schedule start date. Please go
                     <a href="https://secureapps.wsdot.wa.gov/Ferries/Reservations/Vehicle/default.aspx">here</a>
